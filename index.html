@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Local Weather Project</title>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+        <link rel="stylesheet" href="css/weather.css">
+
+
+
+
+  </head>
+
+  <body>
+
+    <!-- This exercise was intended to use jQuery to get loation
+     data and display it. Aside from that, I've used this
+     exercise to focus on layouts using bootstrap, integrating
+     as many components as I could to practice. I also wanted
+     to use this exercise to create a page that would be
+     formatted primarily for mobile and that would use
+     semantic HTML. -->
+
+<header>
+  <nav class="nav navbar-inverse navbar-fixed-top"  id="topbar">
+    <div class="container-fluid">
+      <div class="navbar-header h2 bar-text">
+        <span class="glyphicon glyphicon-map-marker"></span>
+        <span id="locale">    &nbsp;City Name Here</span>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="container-fluid" id="data1">
+  <div class="row">
+    <div class="col-xs-9 f">
+      <p class="h2" id="main">[]</p>
+    </div>
+    <div class="col-xs-3 h2 text-right">
+      <span id="temp">[]</span>&#176;<span id="temp-label">[]</span>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid" id="icon-container">
+  <div>
+    <img src="https://drive.google.com/uc?id=0B10YlyxsqvtaZTZ5REJpSjJrNHM" class='center-block weather-icon' id="weather-icon">
+  </div>
+</section>
+
+<section class="container-fluid data-panel" id="data2">
+  <div class="row text-center">
+    <div class="col-xs-4">
+      <p class="data-head h4">Humidity</p>
+      <span class="data" id="humid">[]</span><span>%</span>
+    </div>
+    <div class="col-xs-4">
+      <p class="data-head h4">Wind</p>
+      <span class="data" id="wind">[]</span><span>&nbsp;</span><span id="wind-label">lbl</span>
+    </div>
+    <div class="col-xs-4">
+      <p class="data-head h4">Clouds</p>
+      <span class="data" id="cloud">[]</span><span>%</span>
+    </div>
+  </div>
+</section>
+
+<footer class="container-fluid footer" id="footer">
+  <div class="row">
+    <div class="col-xs-3 btn-group btn-group-xs">
+      <button type="button" id="C" class="btn btn-default">C</button>
+      <button type="button" id="F" class="btn btn-default active">F</button>
+    </div>
+    <div class="col-xs-7">
+      <p class="small show" id="icon-credit">Icons designed by <a href="http://www.freepik.com" target="_blank">Freepik</a></p>
+      <div class="progress hidden">
+        <div class="progress-bar progress-bar-striped active pbar">
+          Getting loc
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-2 bar-text text-right">
+      <span class="glyphicon glyphicon-refresh"></span>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <script src="js/weather.js"></script>
+
+
+
+
+  </body>
+</html>
